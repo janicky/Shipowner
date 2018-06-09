@@ -7,10 +7,13 @@ public class Vessel implements Comparable<Vessel> {
     private double value;
     private double range;
 
-    public Vessel(String name, double tonnage, double length) {
+    public Vessel(String name, double tonnage, double length, int crew, double value, double range) {
         this.name = name;
         this.tonnage = tonnage;
         this.length = length;
+        this.crew = crew;
+        this.value = value;
+        this.range = range;
     }
 
     public double getLength() {
