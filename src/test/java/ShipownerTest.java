@@ -1,5 +1,25 @@
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ShipownerTest {
+
+    private Shipowner shipowner;
+    private Vessel v1;
+    private Vessel v2;
+
+    @BeforeEach
+    void shipownerSetup() {
+        shipowner = new Shipowner();
+        v1 = new Vessel("Copernicus", 150, 200);
+        v2 = new Vessel("Sternfeld", 90, 110);
+    }
+
+    @Test
+    void removeNotExistingElement() {
+        assertTrue(shipowner.add(v1));
+        assertFalse(shipowner.delete(v2));
+    }
 
 }
