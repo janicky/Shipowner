@@ -56,4 +56,16 @@ public class Vessel implements Comparable<Vessel> {
     public int compareTo(Vessel other) {
         return Double.compare(length, other.getLength());
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(name + ", ");
+        sb.append(tonnage + ", ");
+        sb.append(length + ", ");
+        sb.append(crew + ", ");
+        sb.append(value + ", ");
+        sb.append(range + ", ");
+        return sb.toString();
+    }
 }
