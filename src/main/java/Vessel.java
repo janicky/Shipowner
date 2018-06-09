@@ -1,4 +1,4 @@
-public class Vessel {
+public class Vessel implements Comparable<Vessel> {
 
     private String name;
     private double tonnage;
@@ -11,6 +11,10 @@ public class Vessel {
         this.name = name;
         this.tonnage = tonnage;
         this.length = length;
+    }
+
+    public double getLength() {
+        return length;
     }
 
     public int getCrew() {
@@ -35,5 +39,10 @@ public class Vessel {
 
     public void setRange(double range) {
         this.range = range;
+    }
+
+    @Override
+    public int compareTo(Vessel other) {
+        return Double.compare(length, other.getLength());
     }
 }
