@@ -18,6 +18,10 @@ public class Shipowner implements Collection<Vessel> {
     }
 
     public Vessel getShip(int index) {
-        return vessels.get(index);
+        try {
+            return vessels.get(index);
+        } catch (IndexOutOfBoundsException e) {
+            return null;
+        }
     }
 }
