@@ -17,6 +17,14 @@ public class Vessel implements Comparable<Vessel> {
         return length;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getTonnage() {
+        return tonnage;
+    }
+
     public int getCrew() {
         return crew;
     }
