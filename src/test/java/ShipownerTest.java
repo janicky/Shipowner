@@ -22,4 +22,9 @@ class ShipownerTest {
         assertFalse(shipowner.delete(v2));
     }
 
+    @Test
+    void getElementAtWrongIndex() {
+        assertNull(shipowner.getShip(100));
+    }
+
 }
