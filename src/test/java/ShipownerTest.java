@@ -12,8 +12,8 @@ class ShipownerTest {
     @BeforeEach
     void shipownerSetup() {
         shipowner = new Shipowner();
-        v1 = new Vessel("Copernicus", 150, 200);
-        v2 = new Vessel("Sternfeld", 90, 110);
+        v1 = new Vessel("Copernicus", 150, 200, 1000, 1000000, 500);
+        v2 = new Vessel("Sternfeld", 90, 110, 200, 520000, 400);
     }
 
     @Test
