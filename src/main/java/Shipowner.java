@@ -6,18 +6,18 @@ public class Shipowner implements Collection<Vessel> {
     private List<Vessel> vessels = new ArrayList<Vessel>();
 
     public boolean add(Vessel element) {
-        return false;
+        return vessels.add(element);
     }
 
     public boolean delete(Vessel element) {
-        return false;
+        return vessels.remove(element);
     }
 
     public List<Vessel> getAll() {
-        return null;
+        return vessels;
     }
 
     public Vessel getShip(int index) {
-        return null;
+        return vessels.get(index);
     }
 }
