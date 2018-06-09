@@ -24,4 +24,12 @@ public class Shipowner implements Collection<Vessel> {
             return null;
         }
     }
+
+    public double getValue() {
+        double output = 0;
+        for (Vessel v : vessels) {
+            output += v.getValue();
+        }
+        return output;
+    }
 }
